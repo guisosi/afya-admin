@@ -8,7 +8,7 @@
 | **Matrícula** | 000000 |
 | **Faculdade** | Afya |
 | **Curso** | Ciência da Computação |
-| **Disciplina** | Ciência da Computação |
+| **Disciplina** | Programação de Sistemas Web |
 | **Professor(a)** | Liluyoud Cury de Lacerda |
 | **Semestre** | 2026.2 |
 
