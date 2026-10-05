@@ -56,9 +56,14 @@ dotnet build
 ![Dashboard — celular](docs/prints/mobile.png)
 
 ### HTML gerado (DevTools)
-![Inspeção do HTML no DevTools](docs/prints/devtools.png)
 
-Usei o botão **Novo Projeto** como exemplo. O `MudButton` vira um `<button>` no HTML, com `<span>` para o texto e `<svg>` para o ícone. Classes como `mud-button-filled`, `mud-button-filled-primary` e `mud-button-filled-size-large` aplicam o estilo preenchido, a cor e o tamanho definidos no Razor.
+![Inspeção do card de KPI](docs/prints/devtools-card.png)
+
+Inspecionei o card **Novos Clientes**. O `MudPaper` gera uma `<div>` com as classes `mud-paper`, `mud-elevation-1` e `pa-4`, responsáveis pelo card, pela sombra e pelo espaçamento interno. O `MudStack` também gera uma `<div>`, com `d-flex`, `flex-row` e `align-center` para organizar os elementos. A classe `pa-4` usada no Razor aparece no HTML final.
+
+![Inspeção do botão Novo Projeto](docs/prints/devtools-botao.png)
+
+No botão **Novo Projeto**, o `MudButton` vira um `<button>`, com `<span>` para o texto e `<svg>` para o ícone. As classes `mud-button-filled`, `mud-button-filled-primary` e `mud-button-filled-size-large` aplicam o estilo preenchido, a cor e o tamanho definidos no Razor.
 
 ## Estrutura do projeto
 
