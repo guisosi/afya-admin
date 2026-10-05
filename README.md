@@ -22,8 +22,8 @@ O painel tem indicadores, gráficos, atividades e uma tabela com dados fictício
 
 - .NET 10 (SDK 10.0.401) / Blazor WebAssembly standalone
 - MudBlazor 9.11.0
-- Microsoft.AspNetCore.Components.WebAssembly 10.0.11
-- Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.11 (apenas em desenvolvimento)
+- Microsoft.AspNetCore.Components.WebAssembly 10.0.12
+- Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.12 (apenas em desenvolvimento)
 - Fontes Inter e Roboto via Google Fonts
 
 ## Como executar
@@ -109,7 +109,7 @@ afya-admin/
 | `Pages` | componentes com `@page`, que respondem por uma URL |
 | `wwwroot` | arquivos servidos como estão ao navegador: `index.html`, CSS do template, imagens |
 
-## Componentes usados
+## Componentes criados
 
 | Componente | Responsabilidade | Parâmetros que recebe |
 |---|---|---|
