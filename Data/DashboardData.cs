@@ -1,14 +1,45 @@
 using MudBlazor;
+
 namespace afya_admin.Data;
-public record Kpi(string Titulo, string Valor, string Variacao, bool Positivo, string Icone, Color Cor, string CorHex, double[] Tendencia);
+
+public record Kpi(
+    string Titulo,
+    string Valor,
+    string Variacao,
+    bool Positivo,
+    string Icone,
+    Color Cor,
+    string CorHex,
+    double[] Tendencia);
+
 public record SegmentoCliente(string Nome, int Percentual, Color Cor, string CorHex);
-public record ProjetoPerformance(string Nome, string Icone, Color Cor, int Percentual, int TarefasConcluidas, int TarefasTotal);
+
+public record ProjetoPerformance(
+    string Nome,
+    string Icone,
+    Color Cor,
+    int Percentual,
+    int TarefasConcluidas,
+    int TarefasTotal);
+
 public record Atividade(string Nome, string Acao, string Tempo, string Icone, Color Cor);
-public record ProjetoRecente(string Nome, string Icone, Color Cor, string Cliente, string Responsavel,
-    string Status, Color StatusCor, int Progresso, string Prazo);
+
+public record ProjetoRecente(
+    string Nome,
+    string Icone,
+    Color Cor,
+    string Cliente,
+    string Responsavel,
+    string Status,
+    Color StatusCor,
+    int Progresso,
+    string Prazo);
+
 public static class DashboardData
 {
-    public static readonly string[] Periodos = { "Últimos 7 dias", "Últimos 30 dias", "Últimos 90 dias", "Personalizado" };
+    public static readonly string[] Periodos =
+        { "Últimos 7 dias", "Últimos 30 dias", "Últimos 90 dias", "Personalizado" };
+
     public static readonly List<Kpi> Kpis = new()
     {
         new("Receita", "R$ 248.500", "+12,5%", true, Icons.Material.Filled.AttachMoney, Color.Success, "#10B981",
@@ -20,10 +51,15 @@ public static class DashboardData
         new("Projetos Ativos", "27", "-2,4%", false, Icons.Material.Filled.Folder, Color.Warning, "#F97316",
             new double[] { 12, 15, 19, 16, 18, 15, 17, 14, 15, 12 }),
     };
+
     public static readonly string[] Meses = { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set" };
-    public static readonly double[] ReceitaMensal = { 70000, 117000, 112000, 135000, 165000, 168000, 182000, 212000, 248500 };
+
+    public static readonly double[] ReceitaMensal =
+        { 70000, 117000, 112000, 135000, 165000, 168000, 182000, 212000, 248500 };
+
     public static readonly double[] MetaMensal = { 25000, 45000, 52000, 68000, 95000, 97000, 118000, 152000, 185000 };
     public const int TotalClientes = 1842;
+
     public static readonly List<SegmentoCliente> SegmentosClientes = new()
     {
         new("Empresas", 42, Color.Primary, "#2563EB"),
@@ -31,6 +67,7 @@ public static class DashboardData
         new("Startup", 18, Color.Success, "#10B981"),
         new("Outros", 9, Color.Warning, "#F97316"),
     };
+
     public static readonly List<ProjetoPerformance> Performance = new()
     {
         new("Website Corporativo", Icons.Material.Outlined.DesktopWindows, Color.Primary, 83, 34, 41),
@@ -38,18 +75,28 @@ public static class DashboardData
         new("Migração Cloud", Icons.Material.Outlined.Cloud, Color.Success, 92, 46, 50),
         new("Sistema ERP", Icons.Material.Outlined.Storage, Color.Warning, 54, 27, 50),
     };
+
     public static readonly List<Atividade> Atividades = new()
     {
-        new("Mariana Souza", "adicionou um novo cliente", "há 5 minutos", Icons.Material.Filled.ArrowUpward, Color.Primary),
-        new("Carlos Lima", "finalizou a revisão Website Corporativo", "há 18 minutos", Icons.Material.Filled.Check, Color.Success),
-        new("Ana Martins", "publicou um novo relatório", "há 45 minutos", Icons.Material.Filled.Description, Color.Secondary),
-        new("João Silva", "atualizou as permissões do sistema", "há 1 hora", Icons.Material.Filled.Settings, Color.Warning),
+        new("Mariana Souza", "adicionou um novo cliente", "há 5 minutos", Icons.Material.Filled.ArrowUpward,
+            Color.Primary),
+        new("Carlos Lima", "finalizou a revisão Website Corporativo", "há 18 minutos", Icons.Material.Filled.Check,
+            Color.Success),
+        new("Ana Martins", "publicou um novo relatório", "há 45 minutos", Icons.Material.Filled.Description,
+            Color.Secondary),
+        new("João Silva", "atualizou as permissões do sistema", "há 1 hora", Icons.Material.Filled.Settings,
+            Color.Warning),
     };
+
     public static readonly List<ProjetoRecente> ProjetosRecentes = new()
     {
-        new("Portal Institucional", Icons.Material.Outlined.DesktopWindows, Color.Primary, "TechCorp", "Mariana Souza", "Em andamento", Color.Info, 75, "30 Set"),
-        new("Aplicativo Mobile", Icons.Material.Outlined.PhoneIphone, Color.Secondary, "Nova Digital", "Carlos Lima", "Em revisão", Color.Warning, 90, "05 Out"),
-        new("Migração Cloud", Icons.Material.Outlined.Cloud, Color.Success, "CloudSystems", "Ana Martins", "Concluído", Color.Success, 100, "20 Set"),
-        new("Sistema ERP", Icons.Material.Outlined.Storage, Color.Warning, "Alpha Group", "João Silva", "Em andamento", Color.Info, 48, "15 Out")
+        new("Portal Institucional", Icons.Material.Outlined.DesktopWindows, Color.Primary, "TechCorp", "Mariana Souza",
+            "Em andamento", Color.Info, 75, "30 Set"),
+        new("Aplicativo Mobile", Icons.Material.Outlined.PhoneIphone, Color.Secondary, "Nova Digital", "Carlos Lima",
+            "Em revisão", Color.Warning, 90, "05 Out"),
+        new("Migração Cloud", Icons.Material.Outlined.Cloud, Color.Success, "CloudSystems", "Ana Martins", "Concluído",
+            Color.Success, 100, "20 Set"),
+        new("Sistema ERP", Icons.Material.Outlined.Storage, Color.Warning, "Alpha Group", "João Silva", "Em andamento",
+            Color.Info, 48, "15 Out")
     };
 }
